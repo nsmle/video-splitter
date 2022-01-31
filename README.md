@@ -4,31 +4,36 @@ A simple command line PHP script that splits a video into parts based on a timel
 
 This script aims to break down videos based on timelines such as long videos, tutorials and the like that have timelines like YouTube Videos Segments.
 
-> :important:The script uses [FFMpeg](https://ffmpeg.org) so you have to install it.
+> The script uses [FFMpeg](https://ffmpeg.org) so you have to install it.
 
 Let's get started then! :smiley:
 
 
 ## Installation
 
-clone this repository:
+Download the [video-splitter.php](https://github.com/nsmle/video-splitter/blob/4e8afe8cdb72e1003a251d3c9972b770dba9da7e/video-splitter.php) file with the following command
+```bash
+wget https://raw.githubusercontent.com/nsmle/video-splitter/4e8afe8cdb72e1003a251d3c9972b770dba9da7e/video-splitter.php
+```
+
+or, Clone this repository
 ```bash
 git clone https://github.com/nsmle/video-splitter.git
 ```
 
 ## Usage
 
-Replace `XXXXXX` in `$video` with the video directory to be split. e.g.
+Replace [XXXXXX](https://github.com/nsmle/video-splitter/blob/4e8afe8cdb72e1003a251d3c9972b770dba9da7e/video-splitter.php#L18) in `$video` with the video directory to be split. e.g.
 ```php
 $video = "~/.local/share/videos/video.mp4";
 ```
 
-Replace `XXXXXX` in `$folder` with desired directory as result of split video. If the directory does not exist, it will be created. e.g.
+Replace [XXXXXX](https://github.com/nsmle/video-splitter/blob/master/video-splitter.php#L21) in `$folder` with desired directory as result of split video. If the directory does not exist, it will be created. e.g.
 ```php
 $folder = "~/.local/share/videos/split";
 ```
 
-Replace `XXXXXX` in `$timeline` with the timeline of the video to be split. e.g.
+Replace [XXXXXX](https://github.com/nsmle/video-splitter/blob/master/video-splitter.php#L32) in `$timeline` with the timeline of the video to be split. e.g.
 ```php
 $timeline = <<<TIMELINE
 00:00:00 - Video split 1
